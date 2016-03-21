@@ -5,12 +5,13 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
     }).addTo(map);
 
 function getColor(b) {
-    return b < 50000    ? '#ffffcc' :
-           b < 100000   ? '#a1dab4' :
+    return b < 0        ? '#ffffcc' :
+           b < 50000    ? '#c7e9b4' :
+           b < 100000   ? '#7fcdbb' :
            b < 150000   ? '#41b6c4' :
-           b > 200000   ? '#2c7fb8' :
-           b > 250000   ? '#253494' :
-                      '#808080';
+           b < 200000   ? '#1d91c0' :
+           b < 250000   ? '#225ea8' :
+                      '#0c2c84';
 }
 
 function style(feature) {

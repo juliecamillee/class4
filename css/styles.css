@@ -22,7 +22,7 @@ h1 {
 	background: #FFFFFF;
 	padding: 15px;
 	border-radius: 10px;
-	font-size: 14px;
+	font-size: 12px;
 	position: relative;
 	top: -80px;
 	width: auto;
@@ -32,8 +32,9 @@ h1 {
 
 .legend {
 	line-height: 18px;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: sans-serif;
+	color: white;
 }
 .legend i {
     width: 18px;
