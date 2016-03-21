@@ -17,9 +17,9 @@ function getColor(b) {
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.cbs_pop_2010),
-        weight: 2,
+        weight: 1,
         opacity: 1,
-        color: 'white',
+        color: 'black',
         fillOpacity: 0.5
     };
   }
@@ -28,8 +28,8 @@ function style(feature) {
   var layer = e.target;
 
     layer.setStyle({
-        weight: 5,
-        color: '#666',
+        weight: 1,
+        color: 'white',
         fillOpacity: 0.5
     });
 
