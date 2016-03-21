@@ -1,10 +1,10 @@
-var myMap = L.map('map').setView([40.721762,-74.000473], 10);
+var map = L.map('map').setView([40.721762,-74.000473], 10);
 
 L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
     }).addTo(map);
 
-  function getColor(b) {
+function getColor(b) {
     return b < 50000    ? '#ffffcc' :
            b < 100000   ? '#a1dab4' :
            b < 150000   ? '#41b6c4' :
@@ -24,7 +24,7 @@ function style(feature) {
   }
 
   function mouseoverFunction(e) {
-    var layer = e.target;
+  var layer = e.target;
 
     layer.setStyle({
         weight: 5,
@@ -39,12 +39,10 @@ function style(feature) {
     $('#infoWindow').text(layer.feature.properties.cbs_pop_2010);
   }
 
-
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
   }
 
- 
   function onEachFeature(feature, layer) {
     layer.on({
         mouseover: mouseoverFunction,
